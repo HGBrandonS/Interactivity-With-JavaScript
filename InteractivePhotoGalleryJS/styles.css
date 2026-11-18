@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #121212;
+    color: #f4f4f9;
+    line-height: 1.6;
+    padding: 2rem;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #b0b0b8;
+}
+
+/* Contenedor principal de vista previa */
+#visor {
+    width: 90%;
+    max-width: 750px;
+    height: 420px;
+    margin: 0 auto 2rem auto;
+    background-color: #1e1e24;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #3a3a45;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+    transition: background-image 0.25s ease-in-out;
+}
+
+/* Cuadrícula de miniaturas */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1e1e24;
+}
+
+.miniatura {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estados interactivos para ratón y teclado */
+.miniatura:hover,
+.miniatura:focus {
+    transform: scale(1.03);
+    border-color: #4cc9f0;
+    outline: none; /* Reemplazado por el borde destacado de alto contraste */
+}

@@ -1,0 +1,86 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos Accesible e Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="inicializarGaleria()">
+
+    <header>
+        <h1>Galería de Fotografía y Paisajes</h1>
+        <p>Pasa el cursor sobre una imagen o navega con la tecla <strong>Tab</strong> para previsualizarla.</p>
+    </header>
+
+    <main>
+        <!-- Visor principal donde se proyecta la imagen y su texto alternativo -->
+        <div id="visor" aria-live="polite">
+            <p>Pasa el ratón o enfoca una imagen de abajo para mostrarla aquí.</p>
+        </div>
+
+        <!-- Cuadrícula de miniaturas -->
+        <section class="galeria" aria-label="Miniaturas de la galería">
+            <figure>
+                <img class="miniatura" 
+                     src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=80" 
+                     alt="Valle montañoso iluminado por los rayos del sol al amanecer con un río en calma"
+                     onmouseover="actualizarVisor(this)" 
+                     onmouseleave="restaurarVisor()"
+                     onfocus="actualizarVisor(this)" 
+                     onblur="restaurarVisor()">
+            </figure>
+
+            <figure>
+                <img class="miniatura" 
+                     src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80" 
+                     alt="Sendero de madera atravesando un bosque verde cubierto de neblina matutina"
+                     onmouseover="actualizarVisor(this)" 
+                     onmouseleave="restaurarVisor()"
+                     onfocus="actualizarVisor(this)" 
+                     onblur="restaurarVisor()">
+            </figure>
+
+            <figure>
+                <img class="miniatura" 
+                     src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" 
+                     alt="Playa tropical de arena blanca con olas turquesas rompiendo suavemente en la orilla"
+                     onmouseover="actualizarVisor(this)" 
+                     onmouseleave="restaurarVisor()"
+                     onfocus="actualizarVisor(this)" 
+                     onblur="restaurarVisor()">
+            </figure>
+
+            <figure>
+                <img class="miniatura" 
+                     src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80" 
+                     alt="Cielo nocturno estrellado sobre picos nevados de una cordillera"
+                     onmouseover="actualizarVisor(this)" 
+                     onmouseleave="restaurarVisor()"
+                     onfocus="actualizarVisor(this)" 
+                     onblur="restaurarVisor()">
+            </figure>
+
+            <figure>
+                <img class="miniatura" 
+                     src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" 
+                     alt="Colinas onduladas cubiertas de niebla densa durante el atardecer"
+                     onmouseover="actualizarVisor(this)" 
+                     onmouseleave="restaurarVisor()"
+                     onfocus="actualizarVisor(this)" 
+                     onblur="restaurarVisor()">
+            </figure>
+
+            <figure>
+                <img class="miniatura" 
+                     src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" 
+                     alt="Luz solar filtrándose entre las copas de árboles altos en un bosque frondoso"
+                     onmouseover="actualizarVisor(this)" 
+                     onmouseleave="restaurarVisor()"
+                     onfocus="actualizarVisor(this)" 
+                     onblur="restaurarVisor()">
+            </figure>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
